@@ -11,17 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/phone.css" media="screen and (max-width: 750px)">
+  <link rel="stylesheet" href="./css/table.css" media="screen and (max-width: 768px">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Loopstudios landing page</title>
 </head>
 <body>
   <div class="main-container">
     <header>
-    <div class="navbar">
+    <nav class="navbar">
      <div class="brand-logo menu-logo">
        <img src="/images/logo.svg" alt="logo">
-     </div>
-     <nav class="navbar-nav">
+     </div>       
        <ul class="nav-bar--list">
       <li><a href="#">About</a></li>
       <li><a href="#">Careers</a></li>
@@ -30,10 +32,9 @@
       <li><a href="#">Support</a></li>
     </ul>
      </nav>
-     
-    </div>
+   
     <section class="main-header--title">
-          <p>Immersive experiences that deliver</p>
+          <h1>Immersive experiences that deliver</h1>
     </section>
   </header> 
   </div>
@@ -41,9 +42,9 @@
  <main>
     <section class="description-container">
       <picture class="picture-section-container">
-        <source media="(max-width: 520px)" 
-        srcset="/images/mobile/image-interactive.jpg" alt="Picture for mobile device">
-        <img src="./images/desktop/image-interactive.jpg" alt="Picture for Desktop">
+        <source media="(min-width: 716px)" srcset="/images/desktop/image-interactive.jpg">
+        <source media="(max-width: 414px)" srcset="./images/mobile/image-interactive.jpg">
+       <img src="./images/desktop/image-interactive.jpg" alt="Picture for Desktop">
       </picture>
       <div class="description-container--title">
         <h2>The leader in interactive VR</h2>
@@ -53,43 +54,85 @@
           to their brand.</p>
       </div>
     </section>
-    <section class="main-container">
-        <div class="lookup-inf">
-      <p>Our creations</p>
-      <a href="#">See all</a>
-      </div>
-    <section class="grid-layout-container">
-      <div class="end-self--title">
-        <p>Deep Earth</p>
-      </div>
-      <div class="end-self--title">
-        <p>Night arcade</p>
-      </div>
-      <div class="end-self--title">
-        <p>Soccer team VR</p>
-      </div>
-      <div class="end-self--title">
-        <p>The grid</p>
-      </div>
-      <div class="end-self--title">
-        <p>From up above VR</p>
-      </div>
-      <div class="end-self--title">
-        <p>Pocket borealis</p>
-      </div>
-      <div class="end-self--title">
-        <p>The grid</p>
-      </div>
-      <div class="end-self--title">
-        <p>The curiosity</p>
-      </div>
-      <div class="end-self--title">
-        <p>Make it fisheye</p>
-      </div>
+
+     <section class="lookup-inf" id="lookup-inf">
+      <h2>Our creations</h2>
+     
+    <section class="grid-section-container">
+    <div class="product-card">
+   <picture>
+     <source media="(max-width: 576px)" srcset="./images/mobile/image-deep-earth.jpg">
+     <source media="(min-width: 577px)" srcset="./images/desktop/image-deep-earth.jpg">
+     <img src="./images/desktop/image-deep-earth.jpg" alt="deep-earth">
+     <p>Deep <br> Earth</p>
+   </picture>
+    </div>
+    <div class="product-card">
+      <picture>
+        <source media="(min-width: 576px)" srcset="./images/desktop/image-night-arcade.jpg">
+        <source media="(max-width: 575px)" srcset="./images/mobile/image-night-arcade.jpg">
+        <img src="./images/desktop/image-night-arcade.jpg" alt="night-arcade">
+      </picture>
+      <p>Night <br> Arcade</p>
+       </div>
+       <div class="product-card">
+        <picture>
+          <source media="(min-width: 576px)" srcset="./images/desktop/image-soccer-team.jpg">
+          <source media="(max-width: 575px)" srcset="./images/mobile/image-soccer-team.jpg">
+          <img src="./images/desktop/image-soccer-team.jpg" alt="deep-earth">
+        </picture>
+        <p>Soccer <br> Team vr</p>
+         </div>
+
+         <div class="product-card">
+          <picture>
+            <source media="(min-width: 576px)" srcset="./images/desktop/image-grid.jpg">
+            <source media="(max-width: 575px)" srcset="./images/mobile/image-grid.jpg">
+            <img src="./images/desktop/image-grid.jpg" alt="deep-earth">
+          </picture>
+          <p>The <br> Grid</p>
+           </div>
+
+           <div class="product-card">
+            <picture>
+              <source media="(min-width: 577px)" srcset="./images/desktop/image-from-above.jpg">
+              <source media="(max-width: 576px)" srcset="./images/mobile/image-from-above.jpg">
+              <img src="./images/desktop/image-from-above.jpg" alt="deep-earth">
+            </picture>
+            <p>From Up <br> Above vr</p>
+             </div>
+
+             <section class="product-card">
+              <picture>
+                <source media="(min-width: 577px)" srcset="./images/desktop/image-pocket-borealis.jpg">
+                <source media="(max-width: 576px)" srcset="./images/mobile/image-pocket-borealis.jpg">
+                <img src="./images/desktop/image-pocket-borealis.jpg" alt="deep-earth">
+              </picture>
+              <p>Pocket <br> borealis</p>
+               </section>
+
+               <section class="product-card">
+                <picture>
+                  <source media="(min-width: 576px)" srcset="./images/desktop/image-curiosity.jpg">
+                  <source media="(max-width: 575px)" srcset="./images/mobile/image-curiosity.jpg">
+                  <img src="./images/desktop/image-curiosity.jpg" alt="deep-earth">
+                </picture>
+                <p>The <br> curiosity</p>
+                 </section>
+
+                 <section class="product-card">
+                  <picture>
+                    <source media="(min-width: 576px)" srcset="./images/desktop/image-fisheye.jpg">
+                    <source media="(max-width: 575px)" srcset="./images/mobile/image-fisheye.jpg">
+                    <img src="./images/desktop/image-fisheye.jpg" alt="deep-earth">
+                  </picture>
+                  <p>make it <br> fisheye</p>
+                   </section>
     </section>
-    </section>
+    <a href="#" class="btn-primary">SEE ALL</a>
+  </section>
   </main>
-<footer>
+ <footer>
   <section class="footer-section">
   <figure class="footer-logo">
     <img src="./images/logo.svg" alt="footer logo">
@@ -104,19 +147,16 @@
     </ul>
   </nav>
   </section>
-<section class="footer-social-media">
+<section class="footer-right">
   <div class="social-icon">
-    <span class="facebook icon-item"></span>
-    <span class="twitter icon-item"></span>
-    <span class="pinterest icon-item"></span>
-    <span class="instagram icon-item"></span>
-  </div>
-  <div class="about-footer">© 2021 Loopstudios. All rights reserved.</div>
+   <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></icon-icon></a>
+   <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+   <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
+   <a href="#"><img src="./images/icon-instagram.svg" alt="instagram"></a>
+   </div>
+  <p class="about-footer">© 2021 Loopstudios. All rights reserved.</p>
 </section>
-</footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Franklyn Valdez</a>.
-  </div> -->
+</footer> 
+<script type="module" src="./script/main.js"></script>
 </body>
 </html>
