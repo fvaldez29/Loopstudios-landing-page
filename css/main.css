@@ -1,0 +1,214 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+
+    /*Font Size*/
+    --alata: 'Alata', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 1440px;
+    margin: auto;
+}
+header{
+    background: url(../images/desktop/image-hero.jpg) no-repeat center;
+    background-size: cover;
+    padding: 80px 160px;
+    height: 80vh;
+    margin-bottom: 80px;
+}
+li{
+    position: relative;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--White);
+    font-family: var(--josefin);
+    font-weight: 600;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar--list{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.query-navbar{
+    position: absolute;
+    left: 11%;
+    display: none;
+    
+}
+.hamburger-icon{
+    display: none;
+    cursor: pointer;
+}
+.closet-icon{
+    cursor: pointer;
+    display: none;
+}
+.nav-bar--list li::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    border-bottom: 2px solid var(--White);
+    width: 0;
+}
+.nav-bar--list li:hover::after{
+    width: 20px;
+}
+.main-header--title{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;   
+}
+.main-header--title h1{
+    border: 2px solid var(--White);
+    width: 650px;
+    height: 300px;
+    padding: 30px 30px;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    font-family: var(--josefin);
+    font-weight: 300;
+    color: var(--White);
+}
+.description-container{
+    position: relative;
+    padding: 80px 200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.description-container--title{
+    position: absolute;
+    top: 30%;
+    left: 54%;
+    padding: 140px 80px;
+    margin-bottom: 80px;
+    background-color:  var(--White);
+}
+.description-container--title h2{
+    font-size: 2.8rem;
+    font-family: var(--josefin);
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom:20px;
+}
+.description-container--title p{
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--Very-Dark-Gray);
+}
+.lookup-inf{
+    position: relative;
+    padding: 80px 200px;
+}
+.lookup-inf h2{
+    margin-bottom: 60px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-family: var(--josefin);
+    font-weight: 300;
+}
+.grid-section-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
+.product-card{
+    position: relative;
+    cursor: pointer;
+}
+.product-card:hover{
+    opacity: 0.3;
+}
+.grid-section-container p{
+    position: absolute;
+    bottom: 27px;
+    left: 26px;
+    text-transform: uppercase;
+    font-family: var(--josefin);
+    font-weight: 300;
+    font-size: 2.1rem;
+    color: var(--White);
+}
+.grid-section-container p:hover{
+
+    color: var(--Black);
+}
+.btn-primary{
+    position: absolute;
+    top: 7%;
+    left: 77%;
+    padding: 10px 40px;
+    border: 1px solid var(--Black);
+    color: var(--Black);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: var(--alata);
+    font-weight: 300;
+}
+.btn-primary:hover{
+    background: var(--Black);
+    color: var(--White);
+}
+footer{
+    background-color: var(--Black);
+    padding: 50px 165px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav ul{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    
+}
+.footer-logo img{
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.footer-nav ul li::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    border-bottom: 2px solid var(--White);
+    width: 0;
+}
+.footer-nav ul li:hover::after{
+    width: 20px;
+}
+.footer-right .social-icon{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.social-icon a{
+    padding-left: 20px;
+}
+.about-footer{
+    margin-top: 20px;
+    color: var(--Very-Dark-Gray);
+}
