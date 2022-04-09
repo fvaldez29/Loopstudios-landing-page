@@ -18,6 +18,7 @@ body{
     margin: auto;
 }
 header{
+    position: relative;
     background: url(../images/desktop/image-hero.jpg) no-repeat center;
     background-size: cover;
     padding: 80px 160px;
@@ -54,11 +55,6 @@ a{
     
 }
 .hamburger-icon{
-    display: none;
-    cursor: pointer;
-}
-.closet-icon{
-    cursor: pointer;
     display: none;
 }
 .nav-bar--list li::after{

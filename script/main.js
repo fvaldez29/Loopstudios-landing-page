@@ -1,10 +1,10 @@
 const hamburger = document.querySelector('#icon');
-const closetBtn = document.querySelector('#close');
+const closeBtn = document.querySelectorAll('#btn-close');
 
-const navBar = document.querySelector('.menu');
+const navBar = document.querySelector('.navbar');
 
-const navbarToggle = () =>
-    navBar.classList.toggle('active');
+const navbarToggle = () => navBar.classList.toggle('active');
 
 hamburger.addEventListener('click', navbarToggle);
-closetBtn.addEventListener('click', navbarToggle);
+
+closeBtn.addEventListener('click', navbarToggle);
